@@ -7,4 +7,4 @@ if edad < 18:
 elif edad < 60:
     print("Eres adulto")
 else:
-    print("Eres adulto mayor")
+    print("Eres adulto mayor ")
