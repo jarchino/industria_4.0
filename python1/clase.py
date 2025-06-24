@@ -11,14 +11,23 @@ vehiculos=[
             
 # mostrar_vehiculos_por_año(vehiculos,2020)
 
-def mostrar_vehiculos_por_año(lista,año):
-    resultado =[]
-    for v in lista:
-        if v['año'] == año:
-            resultado.append(v)
-    return resultado
+# def mostrar_vehiculos_por_año(lista,año):
+#     resultado =[]
+#     for v in lista:
+#         if v['año'] == año:
+#             resultado.append(v)
+#     return resultado
 
+# vehiculos_filtrados = mostrar_vehiculos_por_año(vehiculos, 2024)
+
+# for v in vehiculos_filtrados:
+#     print(f"{v['marca']} {v['modelo']} ({v['año']})")
+
+def mostrar_vehiculos_por_año(lista, año):
+    resultado = [v for v in lista if v['año'] == año]
+    resultado.sort(key=lambda x: x['marca'])  # ordena por marca
+    return resultado
 vehiculos_filtrados = mostrar_vehiculos_por_año(vehiculos, 2024)
 
 for v in vehiculos_filtrados:
-    print(f"{v['marca']} {v['modelo']} ({v['año']})")
+     print(f"{v['marca']} {v['modelo']} ({v['año']})")
