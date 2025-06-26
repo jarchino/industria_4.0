@@ -1,0 +1,23 @@
+Tiempo (s),Nivel (litros),Estado
+0,0,Vacío
+1,10,Bajo
+2,20,Bajo
+3,30,Bajo
+4,40,Bajo
+5,50,Medio
+6,60,Medio
+7,70,Medio
+8,80,Alto
+9,90,Alto
+10,100,Lleno
+11,100,Lleno
+12,90,Alto
+13,80,Alto
+14,70,Medio
+15,60,Medio
+16,50,Medio
+17,40,Bajo
+18,30,Bajo
+19,20,Bajo
+20,10,Bajo
+21,0,Vacío

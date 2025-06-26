@@ -64,4 +64,5 @@ for estado, segundos in duraciones.items():
     print(f"{estado}: {segundos} segundos ({porcentaje:.1f}%)")
 
 
-df.to_csv("datos_con_estado.csv", index=False)
+df.to_csv("datos_tanque_estado.csv", index=False)
+
