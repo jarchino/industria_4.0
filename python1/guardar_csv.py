@@ -71,7 +71,8 @@ class Tanque:
 
 
 # Simulación
-tanque = Tanque(100)    #Se crea un tanque de 100 litros
+tanque = Tanque(200)    #Se crea un tanque de 100 litros
 tanque.llenar()         #Se llena poco a poco      
 tanque.descargar()      #Se descarga poco a poco
 tanque.graficar()       #Se muestra grafica del proceso
+tanque.guardar_csv()    #Se crea documento csv

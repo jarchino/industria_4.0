@@ -31,6 +31,7 @@ class Tanque:
         plt.grid(True)
         plt.show()
 
+#Simulación
 tanque = Tanque(200)    #Se crea un tanque de 100 litros
 tanque.llenar()         #Se llena poco a poco
 tanque.graficar()       #Se muestra grafica del proceso
