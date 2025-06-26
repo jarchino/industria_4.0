@@ -17,11 +17,24 @@ class Tanque:
             self.niveles.append(self.nivel)
             self.tiempos.append(segundo)
 
-            print(f"Segundo {segundo}s - Nivel: {self.nivel} litros")
+            print(f"Segundo {segundo}s - Nivel: {self.nivel} litros - Estado: {self.estado()}")
             time.sleep(1)
             self.nivel += paso
 
         print("¡Tanque lleno...!")
+
+    def estado(self):
+        porcentaje = (self.nivel / self.capacidad_maxima) * 100
+        if porcentaje == 0:
+            return "Vacio"
+        elif porcentaje <=40:
+            return "Bajo"
+        elif porcentaje <=70:
+            return "Medio"
+        elif porcentaje <=99:
+            return "Alto"
+        else:
+            return "Lleno"
 
     def graficar(self):
         plt.plot(self.tiempos, self.niveles, marker= 'o')
@@ -31,6 +44,6 @@ class Tanque:
         plt.grid(True)
         plt.show()
 
-tanque = Tanque(200)    #Se crea un tanque de 100 litros
+tanque = Tanque(100)    #Se crea un tanque de 100 litros
 tanque.llenar()         #Se llena poco a poco
 tanque.graficar()       #Se muestra grafica del proceso
