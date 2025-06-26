@@ -25,7 +25,9 @@ print(tiempos_lleno.to_list())
 df.plot(x="Tiempo (s)", y="Nivel (litros)", marker='o', title="Nivel de tanque a lo largo del tiempo")
 
 plt.tight_layout() 
-plt.show()
+plt.savefig("grafica_nivel_tanque.png")
+#plt.show() #Para mostrar
+plt.close() #Para cerrar sin mostrar
 
 def clasificar_estado(nivel):
     nivel_porciento = (nivel / nivel_max) * 100
@@ -55,3 +57,11 @@ print("\nDuración total por estado (en segundos):")
 for estado, segundos in duraciones.items():
     print(f"{estado}: {segundos} segundos")
 
+total = duraciones.sum()
+print("\nPorcentaje por tiempo de estado")
+for estado, segundos in duraciones.items():
+    porcentaje = (segundos / total) * 100
+    print(f"{estado}: {segundos} segundos ({porcentaje:.1f}%)")
+
+
+df.to_csv("datos_con_estado.csv", index=False)
